@@ -3,13 +3,14 @@
 Uma interface entre RS485 (modbus) e LoRa com ESP32, MAX485 e Transceiver Ebyte E32 100mW.
 
 
-
 # Descrição
 ----------------------------
 Este projeto surgiu da necessidade de obter dados de dispositivos que possuam interface para comunicação de dados RS485 (por rede modbus) e posterior envio
 das mesmas via rádio LoRa.
 
 Ainda em desenvolvimento, visa integrar uma rede de nós LoRa ao gateway LoRa principal (o master). Quando completo, o master poderá efetuar requisições para cada um dos nós e enviará tais dados para um servidor rodando um broker MQTT na nuvem. O master receberá configurações de quais nós ele quer dados e de quais dados ele deseja receber, bem como o intervalo de amostragem. 
+
+O Master efetuará requisições em broadcast onde apenas o nó que possuir determinado ID (previamente configurado) responderá às requisições.
 
 # Aplicações Possíveis
 ---------------------------
